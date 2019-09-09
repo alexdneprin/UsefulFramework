@@ -12,7 +12,7 @@ public extension Date {
 
     
     // Date().quarter -> 3 // date in third quarter of the year.
-    public var quarter: Int {
+    var quarter: Int {
         let month = Double(Calendar.current.component(.month, from: self))
         let numberOfMonths = Double(Calendar.current.monthSymbols.count)
         let numberOfMonthsInQuarter = numberOfMonths / 4
@@ -21,19 +21,19 @@ public extension Date {
     
     
     // Date().weekOfYear -> 2 // second week in the year.
-    public var weekOfYear: Int {
+    var weekOfYear: Int {
         return Calendar.current.component(.weekOfYear, from: self) }
     
     
     // Date().weekOfMonth -> 3 // date is in third week of the month.
-    public var weekOfMonth: Int {
+    var weekOfMonth: Int {
         return Calendar.current.component(.weekOfMonth, from: self) }
     
     
     // Date().year -> 2017
     // var someDate = Date()
     // someDate.year = 2000 // sets someDate's year to 2000
-    public var year: Int {
+    var year: Int {
         get {
             return Calendar.current.component(.year, from: self)
         }
@@ -50,7 +50,7 @@ public extension Date {
     //     Date().month -> 1
     //     var someDate = Date()
     //     someDate.month = 10 // sets someDate's month to 10.
-    public var month: Int {
+    var month: Int {
         get {
             return Calendar.current.component(.month, from: self)
         }
@@ -70,7 +70,7 @@ public extension Date {
     //     Date().day -> 12
     //     var someDate = Date()
     //     someDate.day = 1 // sets someDate's day of month to 1.
-    public var day: Int {
+    var day: Int {
         get {
             return Calendar.current.component(.day, from: self)
         }
@@ -88,7 +88,7 @@ public extension Date {
     
     
     //     Date().weekday -> 5 // fifth day in the current week.
-    public var weekday: Int {
+    var weekday: Int {
         return Calendar.current.component(.weekday, from: self)
     }
     
@@ -96,7 +96,7 @@ public extension Date {
     //     Date().hour -> 17 // 5 pm
     //     var someDate = Date()
     //     someDate.hour = 13 // sets someDate's hour to 1 pm.
-    public var hour: Int {
+    var hour: Int {
         get {
             return Calendar.current.component(.hour, from: self)
         }
@@ -116,7 +116,7 @@ public extension Date {
     //     Date().minute -> 39
     //     var someDate = Date()
     //     someDate.minute = 10 // sets someDate's minutes to 10.
-    public var minute: Int {
+    var minute: Int {
         get {
             return Calendar.current.component(.minute, from: self)
         }
@@ -136,7 +136,7 @@ public extension Date {
     //     Date().second -> 55
     //     var someDate = Date()
     //     someDate.second = 15 // sets someDate's seconds to 15.
-    public var second: Int {
+    var second: Int {
         get {
             return Calendar.current.component(.second, from: self)
         }
@@ -156,7 +156,7 @@ public extension Date {
     //     Date().nanosecond -> 981379985
     //     var someDate = Date()
     //     someDate.nanosecond = 981379985 // sets someDate's seconds to 981379985.
-    public var nanosecond: Int {
+    var nanosecond: Int {
         get {
             return Calendar.current.component(.nanosecond, from: self)
         }
@@ -177,7 +177,7 @@ public extension Date {
     //     Date().millisecond -> 68
     //     var someDate = Date()
     //     someDate.millisecond = 68 // sets someDate's nanosecond to 68000000.
-    public var millisecond: Int {
+    var millisecond: Int {
         get {
             return Calendar.current.component(.nanosecond, from: self) / 1000000
         }
